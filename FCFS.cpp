@@ -49,7 +49,7 @@ int main() {
     // Displaying the results
     cout << "\nProcess\tArrival Time\tBurst Time\tCompletion Time\tTurn Around Time\tWaiting Time\n";
     for (i = 0; i < n; i++) {
-        cout << i + 1 <<" " <<  arrival_time[i] <<" "<< burst_time[i]<<" "<< completion_time[i]<<" "<< turn_around_time[i]<<" "<< waiting_time[i] << endl;
+        cout << i + 1 <<"\t\t " <<  arrival_time[i] <<"\t\t "<< burst_time[i]<<"\t\t "<< completion_time[i]<<"\t\t "<< turn_around_time[i]<<"\t\t "<< waiting_time[i] << endl;
     }
 
     return 0;

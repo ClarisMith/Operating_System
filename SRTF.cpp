@@ -1,11 +1,12 @@
-#include <stdio.h>
-#include <limits.h>
+#include <bits/stdc++.h>
+using namespace std;
+
 
 int main()
 {
     int n, i, j;
-    printf("Enter the number of processes: ");
-    scanf("%d", &n);
+    cout <<"Enter the number of processes: ";
+    cin >>n;
 
     int arrival_time[n], burst_time[n], remaining_time[n];
     int waiting_time[n], turn_around_time[n], completion_time[n];
@@ -13,8 +14,8 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter arrival time and burst time for process %d: ", i + 1);
-        scanf("%d %d", &arrival_time[i], &burst_time[i]);
+        cout <<"Enter arrival time and burst time for process "<< i + 1 <<":";
+        cin >>arrival_time[i] >>burst_time[i];
         remaining_time[i] = burst_time[i];
     }
 
@@ -47,10 +48,9 @@ int main()
     }
 
     // Displaying the results
-    printf("\nProcess\tArrival Time\tBurst Time\tCompletion Time\tTurn Around Time\tWaiting Time\n");
-    for (i = 0; i < n; i++)
-    {
-        printf("%d\t%d\t\t%d\t\t%d\t\t%d\t\t\t%d\n", i + 1, arrival_time[i], burst_time[i], completion_time[i], turn_around_time[i], waiting_time[i]);
+    cout << "\nProcess\tArrival Time\tBurst Time\tCompletion Time\tTurn Around Time\tWaiting Time\n";
+    for (i = 0; i < n; i++) {
+        cout << i + 1 <<" \t\t " <<  arrival_time[i] <<"\t\t "<< burst_time[i]<<"\t\t "<< completion_time[i]<<"\t\t "<< turn_around_time[i]<<"\t\t "<< waiting_time[i] << endl;
     }
 
     return 0;
